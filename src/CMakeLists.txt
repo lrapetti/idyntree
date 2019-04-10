@@ -19,6 +19,7 @@ add_subdirectory(sensors)
 add_subdirectory(model_io)
 add_subdirectory(estimation)
 add_subdirectory(high-level)
+add_subdirectory(inverse-velocity-kinematics)
 
 if (IDYNTREE_USES_IPOPT)
   set(IDYNTREE_BUILD_IK TRUE)
