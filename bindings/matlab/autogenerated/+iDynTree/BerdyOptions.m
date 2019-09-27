@@ -64,7 +64,7 @@ classdef BerdyOptions < SwigRef
         iDynTreeMEX(1576, self, varargin{1});
       end
     end
-    function varargout = includeFixedBaseExternalWrench(self, varargin)
+    function varargout = includeCoMAccelerometerAsSensor(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -74,7 +74,7 @@ classdef BerdyOptions < SwigRef
         iDynTreeMEX(1578, self, varargin{1});
       end
     end
-    function varargout = jointOnWhichTheInternalWrenchIsMeasured(self, varargin)
+    function varargout = comConstraintLinkIndexVector(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -84,7 +84,7 @@ classdef BerdyOptions < SwigRef
         iDynTreeMEX(1580, self, varargin{1});
       end
     end
-    function varargout = baseLink(self, varargin)
+    function varargout = includeFixedBaseExternalWrench(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -94,12 +94,32 @@ classdef BerdyOptions < SwigRef
         iDynTreeMEX(1582, self, varargin{1});
       end
     end
+    function varargout = jointOnWhichTheInternalWrenchIsMeasured(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = iDynTreeMEX(1583, self);
+      else
+        nargoutchk(0, 0)
+        iDynTreeMEX(1584, self, varargin{1});
+      end
+    end
+    function varargout = baseLink(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = iDynTreeMEX(1585, self);
+      else
+        nargoutchk(0, 0)
+        iDynTreeMEX(1586, self, varargin{1});
+      end
+    end
     function varargout = checkConsistency(self,varargin)
-      [varargout{1:nargout}] = iDynTreeMEX(1583, self, varargin{:});
+      [varargout{1:nargout}] = iDynTreeMEX(1587, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        iDynTreeMEX(1584, self);
+        iDynTreeMEX(1588, self);
         self.SwigClear();
       end
     end

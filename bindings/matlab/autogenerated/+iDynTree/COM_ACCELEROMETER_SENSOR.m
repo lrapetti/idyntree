@@ -1,7 +1,7 @@
-function v = SENSOR_FT_OFFSET_TORQUE_Z()
+function v = COM_ACCELEROMETER_SENSOR()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = iDynTreeMEX(0, 50);
+    vInitialized = iDynTreeMEX(0, 32);
   end
   v = vInitialized;
 end
