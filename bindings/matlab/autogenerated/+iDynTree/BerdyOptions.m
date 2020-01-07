@@ -84,7 +84,7 @@ classdef BerdyOptions < SwigRef
         iDynTreeMEX(1580, self, varargin{1});
       end
     end
-    function varargout = comConstraintLinkIndexVector(self, varargin)
+    function varargout = comConstraintLinkNamesVector(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
