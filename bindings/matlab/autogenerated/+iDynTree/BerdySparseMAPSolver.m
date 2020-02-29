@@ -62,6 +62,9 @@ classdef BerdySparseMAPSolver < SwigRef
     function varargout = getLastEstimate(self,varargin)
       [varargout{1:nargout}] = iDynTreeMEX(1661, self, varargin{:});
     end
+    function varargout = getSimulatedMeasurementVector(self,varargin)
+      [varargout{1:nargout}] = iDynTreeMEX(1662, self, varargin{:});
+    end
   end
   methods(Static)
   end
