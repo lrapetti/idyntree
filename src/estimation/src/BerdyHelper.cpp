@@ -2729,6 +2729,21 @@ bool BerdyHelper::extractLinkNetExternalWrenchesFromDynamicVariables(const Vecto
     return true;
 }
 
+bool BerdyHelper::extractLinkInternalWrenchesFromDynamicVariables(const VectorDynSize& d,
+                                                                  LinkInternalWrenches& intWrenches) const
+{
+    const Model& model = this->model();
+    for (LinkIndex lnkIdx=0; lnkIdx < static_cast<LinkIndex>(model.getNrOfLinks()); lnkIdx++)
+    {
+        IndexRange range = this->getRangeLinkVariable(JOINT_WRENCH, lnkIdx);
+        LinearForceVector3   force(d.data() + range.offset, 3);
+        AngularMotionVector3 torque(d.data() + range.offset + 3, 3);
+        intWrenches(lnkIdx) = Wrench(force, torque);
+    }
+
+    return true;
+}
+
 bool BerdyHelper::setNetExternalWrenchMeasurementFrame(const LinkIndex lnkIndex, const Transform& link_H_externalWrenchMeasurementFrame)
 {
     if (!m_model.isValidLinkIndex(lnkIndex)) return false;

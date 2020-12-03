@@ -805,6 +805,11 @@ public:
     bool extractLinkNetExternalWrenchesFromDynamicVariables(const VectorDynSize& d,
                                                             LinkNetExternalWrenches& netExtWrenches,
                                                             const bool task1) const;
+    /**
+     * Extract the link internal wrench from the dynamic variables
+     */
+    bool extractLinkInternalWrenchesFromDynamicVariables(const VectorDynSize& d,
+                                                         LinkInternalWrenches& intWrenches) const;
 
 
     /**
