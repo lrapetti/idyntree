@@ -662,6 +662,12 @@ public:
     bool extractLinkNetExternalWrenchesFromDynamicVariables(const VectorDynSize& d,
                                                             LinkNetExternalWrenches& netExtWrenches) const;
 
+    /**
+     * Extract the link internal wrench from the dynamic variables
+     */
+    bool extractLinkInternalWrenchesFromDynamicVariables(const VectorDynSize& d,
+                                                         LinkInternalWrenches& intWrenches) const;
+
 
     /**
       * @name Methods to submit the input data for dynamics computations.
