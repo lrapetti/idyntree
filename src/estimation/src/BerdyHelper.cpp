@@ -2735,7 +2735,7 @@ bool BerdyHelper::extractLinkInternalWrenchesFromDynamicVariables(const VectorDy
     const Model& model = this->model();
     for (LinkIndex lnkIdx=0; lnkIdx < static_cast<LinkIndex>(model.getNrOfLinks()); lnkIdx++)
     {
-        IndexRange range = this->getRangeLinkVariable(JOINT_WRENCH, lnkIdx);
+        IndexRange range = this->getRangeJointVariable(JOINT_WRENCH, lnkIdx);
         LinearForceVector3   force(d.data() + range.offset, 3);
         AngularMotionVector3 torque(d.data() + range.offset + 3, 3);
         intWrenches(lnkIdx) = Wrench(force, torque);
