@@ -18,6 +18,7 @@ if(IDYNTREE_USES_IRRLICHT)
                                                src/JetsVisualization.h
                                                src/VectorsVisualization.h
                                                src/FrameVisualization.h
+                                               src/SpheresVisualization.h
                                                src/Texture.h
                                                src/TexturesHandler.h
                                                src/Light.h
@@ -29,6 +30,7 @@ if(IDYNTREE_USES_IRRLICHT)
                                                src/JetsVisualization.cpp
                                                src/VectorsVisualization.cpp
                                                src/FrameVisualization.cpp
+                                               src/SpheresVisualization.cpp
                                                src/Texture.cpp
                                                src/TexturesHandler.cpp
                                                src/Light.cpp
